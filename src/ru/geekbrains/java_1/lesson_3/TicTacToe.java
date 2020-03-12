@@ -78,20 +78,32 @@ public class TicTacToe {
         }
         return true;
     }
-
+//не понял как реализовать проверку в циклах, какое условие прописать чтобы
+//в нем была уже информация по 3 кординатам char c в 3 вариантах.
+//
     private static boolean checkWin(char c) {
-        if (field[0][0] == c && field[0][1] == c && field[0][2] == c) return true;
-        if (field[1][0] == c && field[1][1] == c && field[1][2] == c) return true;
-        if (field[2][0] == c && field[2][1] == c && field[2][2] == c) return true;
+//        for (int i = 0; i < field.length; i++) {
+//            for (int j = 0; j < field.length; j++) {
+//                if (field[i][j]  == c && (field[i][j]) == c) ???
+//                    return true;
+//            }
+//        }
+//        return false;
+//    }
 
-        if (field[0][0] == c && field[1][0] == c && field[2][0] == c) return true;
-        if (field[0][1] == c && field[1][1] == c && field[2][1] == c) return true;
-        if (field[0][2] == c && field[1][2] == c && field[2][2] == c) return true;
 
-        if (field[0][0] == c && field[1][1] == c && field[2][2] == c) return true;
-        if (field[0][2] == c && field[1][1] == c && field[2][0] == c) return true;
+        if (field[0][0] == c && field[0][1] == c && field[0][2] == c) return true; //вертикальные
+        if (field[1][0] == c && field[1][1] == c && field[1][2] == c) return true; //вертикальные
+        if (field[2][0] == c && field[2][1] == c && field[2][2] == c) return true; //вертикальные
+
+        if (field[0][0] == c && field[1][0] == c && field[2][0] == c) return true; //горизонтальные
+        if (field[0][1] == c && field[1][1] == c && field[2][1] == c) return true; //горизонтальные
+        if (field[0][2] == c && field[1][2] == c && field[2][2] == c) return true; //горизонтальные
+
+        if (field[0][0] == c && field[1][1] == c && field[2][2] == c) return true; //диагональные
+        if (field[0][2] == c && field[1][1] == c && field[2][0] == c) return true; //диагональные
         return false;
-    }
+      }
 
     public static void main(String[] args) {
         while (true) {
