@@ -19,6 +19,10 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Horse horse1 = new Horse("Buyan", 1800, 1.5, 1500);
+        horse1.run(1200);
+
+
 
 
     }
