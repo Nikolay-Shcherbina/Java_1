@@ -4,12 +4,14 @@ public class Main {
 
     public static void main(String[] args) {
 
+        // double distance_run = 400 + Math.random() * 200;
+
         Horse h = new Horse("Bucephalus", 1500, 3, 100);
         Dog d = new Dog("Rex", 500, 0.5, 10);
         Cat c = new Cat("Tom", 200, 2);
         Bird b = new Bird("Goga", 5, 0.2);
 
-        h.run(1200);
+        h.run(1800);
         h.jump(4);
         h.swim(85);
         d.run(550);
@@ -19,6 +21,7 @@ public class Main {
         c.jump(1.5);
         b.run(5);
         b.jump(0.5);
+
 
 //        Animal[] zoo = {h, d, c, b};
 //

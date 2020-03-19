@@ -13,20 +13,20 @@ public abstract class Animal extends Object {
     }
 
     // беги
-    protected void run(int distance){
+    protected int run(int distance){
         if (distance <= running_length) {
-            System.out.println(name + " Пробежал " + distance);
+            return distance;
         } else {
-            System.out.println(name + " Не может пробежать " + distance);
+            return running_length;
         }
     }
 
     // прыгни
-    protected void jump(double distance){
+    protected double jump(double distance){
         if (distance <= jumping_height) {
-            System.out.println(name + " Прыгнул " + distance);
+            return distance;
         } else {
-            System.out.println(name + " Не может прыгнуть " + distance);
+            return jumping_height;
         }
 
     }

@@ -9,11 +9,11 @@ public class Horse extends Animal {
     }
 
     // плыви
-    protected void swim(int distance) {
+    protected int swim(int distance) {
         if (distance <= swimming_length) {
-            System.out.println(name + " Проплыл " + distance);
+            return distance;
         } else {
-            System.out.println(name + " Не может проплыть " + distance);
+            return swimming_length;
         }
     }
 }
