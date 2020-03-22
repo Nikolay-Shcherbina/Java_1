@@ -15,13 +15,17 @@ public class Main {
     public static void main(String[] args) {
 
         try {
-            PrintStream ps = new PrintStream(new FileOutputStream("file1.txt", true));
-            ps.println("HelloWorld");
-            ps.close();
+            PrintStream psFile1 = new PrintStream(new FileOutputStream("file1.txt"));
+            psFile1.println("HelloWorld");
+            psFile1.close();
 
-            Scanner sc = new Scanner(new FileInputStream("file1.txt"));
-            System.out.println(sc.next());
-            sc.close();
+            PrintStream psFile2 = new PrintStream(new FileOutputStream("file2.txt"));
+            psFile2.println("Hello");
+            psFile2.close();
+
+//            Scanner sc = new Scanner(new FileInputStream("file1.txt"));
+//            System.out.println(sc.next());
+//            sc.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
